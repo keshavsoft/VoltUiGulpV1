@@ -213,3 +213,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.1
 
 - just now started
+
+### 1.1.2
+
+- Read only changed at some places
