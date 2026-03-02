@@ -217,3 +217,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.2
 
 - Read only changed at some places
+
+### 1.1.3
+
+- From Local Storage started
