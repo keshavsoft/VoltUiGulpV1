@@ -28,7 +28,7 @@
     {{> SideNavs/fromLocalStorage path="../.." currentPage="groupBy" currentPageGroup="fromLocalStorage"}}
 
     <main class="content">
-        {{> _topbarWithSignOut path="../.."}}
+        {{> TopBars/_withLoad path="../.."}}
 
         {{> _breadCrumb path="../.." page="groupBy"}}
 
@@ -70,10 +70,9 @@
 
         {{> Scripts/_ForTableOnly path="../.."}}
 
-        <script type="module" src="../../Js/CommonJs/entryFile.js"></script>
+        <script type="module" src="../../Js/CommonJs/V4/entryFile.js"></script>
         <script type="module" src="../../Js/FromLocalStorage/GroupBy/entryFile.js"></script>
     </main>
-
 </body>
 
 </html>

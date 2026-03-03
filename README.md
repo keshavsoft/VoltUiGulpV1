@@ -221,3 +221,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.3
 
 - From Local Storage started
+
+### 1.1.4
+
+- Load Data To topy bar in seperate folder
