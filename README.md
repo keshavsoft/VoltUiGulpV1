@@ -225,3 +225,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.4
 
 - Load Data To topy bar in seperate folder
+
+### 1.1.5
+
+- Load Data To top bar still working in indexV6, GroupBy
