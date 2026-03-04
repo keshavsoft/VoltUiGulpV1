@@ -6,6 +6,7 @@ const StartFunc = ({ inCurrentTarget }) => {
     let jVarLocalPostObject = jFLocalPreparePostBody({ 
         inQuerySelectorAll: jVarLocalInputs 
     });
+console.log("hhh",jVarLocalPostObject);
 
     return jVarLocalPostObject;
 };
