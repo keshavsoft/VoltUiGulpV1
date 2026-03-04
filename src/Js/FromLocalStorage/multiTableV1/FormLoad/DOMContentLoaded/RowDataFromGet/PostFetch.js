@@ -1,19 +1,13 @@
-import UrlJson from './url.json' with {type: 'json'};
 import commonConfig from '../../../../../Config.json' with {type: 'json'};
 
 let StartFunc = async () => {
     let jVarLocalFilterString = getUrlQueryParams({ inGetKey: "inRowPk" });
 
     let jVarTableName = commonConfig.ForeignkeyTables[0];
-    const newTableName = commonConfig.TableName.replace(/\/[^/]+$/, `/${jVarTableName}`);
+    let storageData = JSON.parse(localStorage.getItem(jVarTableName));
+    let LocalFindData = storageData.find(el => el.pk == jVarLocalFilterString);
 
-    let jVarLoclRowDataUrl = UrlJson.RowDataUrl;
-
-    let jVarLocalFetchUrl = `${newTableName}/${jVarLoclRowDataUrl}/${jVarLocalFilterString}`;
-
-    let response = await fetch(jVarLocalFetchUrl);
-
-    return response;
+    return LocalFindData;
 };
 
 let getUrlQueryParams = ({ inGetKey }) => {

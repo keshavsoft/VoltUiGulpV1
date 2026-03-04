@@ -6,20 +6,20 @@ import { StartFunc as Status401 } from "./status401.js";
 let StartFunc = async ({ inResponse }) => {
     let jVarLocalResponse = await inResponse;
 
-    if (jVarLocalResponse.status === 200) {
-        let jVarLocalDataAsJson = await jVarLocalResponse.json();
+    if (jVarLocalResponse) {
+        let jVarLocalDataAsJson = jVarLocalResponse
         Status200({ inResponseAsJson: jVarLocalDataAsJson });
     };
 
-    if (jVarLocalResponse.status === 409) {
-        let jVarLocalSavedPk = await jVarLocalResponse.text();
-        Status409({ inResponse: jVarLocalSavedPk });
-    };
+    // if (jVarLocalResponse.status === 409) {
+    //     let jVarLocalSavedPk = await jVarLocalResponse.text();
+    //     Status409({ inResponse: jVarLocalSavedPk });
+    // };
 
-    if (jVarLocalResponse.status === 401) {
-        let jVarLocalSavedPk = await jVarLocalResponse.text();
-        Status401({ inResponse: jVarLocalSavedPk });
-    };
+    // if (jVarLocalResponse.status === 401) {
+    //     let jVarLocalSavedPk = await jVarLocalResponse.text();
+    //     Status401({ inResponse: jVarLocalSavedPk });
+    // };
 
     // if (jVarLocalResponse.status === 404) {
     //     let jVarLocalSavedPk = await jVarLocalResponse.text();
