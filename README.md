@@ -229,3 +229,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.5
 
 - Load Data To top bar still working in indexV6, GroupBy
+
+### 1.1.6
+
+- From LocalStorage, Common key changed to table Name from Config json

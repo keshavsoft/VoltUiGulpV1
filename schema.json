@@ -1,9 +1,9 @@
 {
-    "tableName": "LedgerNames",
+    "tableName": "StockItems",
     "columns": [
         {
-            "field": "LedgerName",
-            "title": "LedgerName",
+            "field": "StockItemName",
+            "title": "StockItemName",
             "unique": true,
             "type": "text",
             "isInput": true,
@@ -11,14 +11,14 @@
             "defaultvalue": "KeshavSoft"
         },
         {
-            "field": "LedgerParentName",
-            "title": "LedgerParentName",
+            "field": "StockItemReservedName",
+            "title": "StockItemReservedName",
             "type": "text",
             "isInput": true
         },
         {
-            "field": "LedgerType",
-            "title": "LedgerType",
+            "field": "StockItemType",
+            "title": "StockItemType",
             "type": "text",
             "isInput": true
         }

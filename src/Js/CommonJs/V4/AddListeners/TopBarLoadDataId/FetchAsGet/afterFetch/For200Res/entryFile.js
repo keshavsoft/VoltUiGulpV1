@@ -1,5 +1,9 @@
+import CommonTableName from '../../../../../../../Config.json' with {type: 'json'};
+
 let StartFunc = ({ inResponseAsJson }) => {
-    localStorage.setItem("TableData", JSON.stringify(inResponseAsJson));
+    const LocalOnlyTableName = CommonTableName.OnlyTableName;
+
+    localStorage.setItem(LocalOnlyTableName, JSON.stringify(inResponseAsJson));
 
     LocalFuncRemoveClass({ inHtmlId: "TopBarNotificationId", inClassName: "unread" });
 };

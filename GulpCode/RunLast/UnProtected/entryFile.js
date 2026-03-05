@@ -32,6 +32,7 @@ const StartFunc = ({ inDistPath, inCommonColumns }) => {
     contentAsJson.columns = CommonColumns.columns;
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
+    contentAsJson.OnlyTableName = CommonColumns.tableName;
 
     contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
     contentAsJson.ForeignkeyTables = CommonColumns.ForeignkeyTables;
