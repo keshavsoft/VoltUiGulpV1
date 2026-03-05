@@ -233,3 +233,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.6
 
 - From LocalStorage, Common key changed to table Name from Config json
+
+### 1.1.7
+
+- From LocalStorage, load data key changed to table Name from Config json not hard coded
