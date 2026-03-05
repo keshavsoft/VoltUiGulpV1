@@ -237,3 +237,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.7
 
 - From LocalStorage, load data key changed to table Name from Config json not hard coded
+
+### 1.1.8
+
+- Vertical V1 perfect, ui sidebar parent to indexV6

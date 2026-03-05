@@ -1,9 +1,9 @@
 let StartFunc = ({ inResponse }) => {
     Swal.fire({
-        text: `${inResponse}`,
-        icon: "error",
+        text: `No Api`,
+        icon: "question",
         title: "check"
     });
 };
 
-export { StartFunc }
+export { StartFunc };
