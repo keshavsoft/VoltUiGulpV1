@@ -4,12 +4,10 @@ import { StartFunc as status401 } from "./status401.js";
 import { StartFunc as status409 } from "./status409.js";
 
 let StartFunc = async ({ inResponse }) => {
-    console.log("inResponse:", inResponse);
-
-    let jVarLocalResponse = inResponse;
+    let jVarLocalResponse = await inResponse;
 
     if (jVarLocalResponse.status === 200) {
-        let jVarLocalSavedPk = jVarLocalResponse.RowPk;
+        let jVarLocalSavedPk = await jVarLocalResponse.json();
 
         Status200({ inRowPk: jVarLocalSavedPk });
     };

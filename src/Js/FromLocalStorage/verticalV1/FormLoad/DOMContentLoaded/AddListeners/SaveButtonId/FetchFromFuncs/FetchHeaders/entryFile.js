@@ -1,9 +1,13 @@
+import KeysJson from './keys.json' with { type: 'json' };
 
 let StartFunc = () => {
     let jVarLocalForm = document.getElementById("FormId");
 
     const serializedData = jFLocalSerializeFormData(jVarLocalForm);
-    return serializedData;
+
+    KeysJson.body = JSON.stringify(serializedData);
+
+    return KeysJson;
 };
 
 function jFLocalSerializeFormData(form) {

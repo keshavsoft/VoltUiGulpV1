@@ -1,43 +1,17 @@
 import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/entryFile.js";
 import ConfigJson from "../../../../../../../Config.json" with { type: "json" };
+import UrlJson from "./url.json" with { type: "json" };
 
-const StartFunc = async () => {
-    const tableRoute = ConfigJson.TableName.split("/")[2];
-    const fetchHeaders = StartFuncFetchHeaders();
+let StartFunc = async () => {
+    const LocalStartRoute = ConfigJson.TableName;
+    let LocalroutePath = UrlJson.PostUrl;
 
-    let storageData = JSON.parse(localStorage.getItem(tableRoute));
-    const response = {};
+    let jVarLocalFetchHeaders = StartFuncFetchHeaders();
+    let jVarLocalFetchUrl = `${LocalStartRoute}/${LocalroutePath}`;
+    let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
 
-    // If data already exists in localStorage
-    if (Array.isArray(storageData)) {
-        const pkArray = storageData
-            .map(item => Number(item.pk))
-            .filter(pk => !isNaN(pk));
-
-        const maxPk = Math.max(...pkArray, 0) + 1;
-
-        const newRow = { ...fetchHeaders, pk: maxPk };
-        storageData.push(newRow);
-
-        localStorage.setItem(tableRoute, JSON.stringify(storageData));
-
-        response.status = 200;
-        response.RowPk = maxPk;
-
-    } else {
-        // First insert
-        const newRow = { ...fetchHeaders, pk: 1 };
-        const newArray = [newRow];
-
-        console.log("First Insert:", newRow, newArray);
-
-        localStorage.setItem(tableRoute, JSON.stringify(newArray));
-
-        response.status = 200;
-        response.RowPk = 1;
-    }
-
-    return response;
+    return await response;
 };
 
 export { StartFunc };
+
